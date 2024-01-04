@@ -5,22 +5,23 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "os",
           "background": "#6272a4",
           "foreground": "#f8f8f2",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "{{ if .WSL }}WSL {{ end }}{{.Icon }} ",
-          "type": "os"
+          "template": "{{ if .WSL }}WSL {{ end }}{{.Icon }} "
         },
         {
+          "type": "session",
           "background": "#bd93f9",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " {{ .UserName }} ",
-          "type": "session"
+          "template": " {{ .UserName }} "
         },
         {
+          "type": "path",
           "background": "#ff79c6",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
@@ -28,14 +29,14 @@
             "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1 ",
             "home_icon": "\ueb06",
-	    "max_depth": 4,
+	    "max_depth": 3,
             "style": "agnoster_short"
           },
           "style": "powerline",
-          "template": " {{ .Path }} ",
-          "type": "path"
+          "template": " {{ .Path }} "
         },
         {
+          "type": "git",
           "background": "#ffb86c",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
@@ -46,16 +47,15 @@
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
-          "type": "git"
+          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) "
         },
         {
+          "type": "node",
           "background": "#8be9fd",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "type": "node"
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
         }
       ],
       "type": "prompt"
@@ -64,14 +64,14 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "aws",
           "background": "#f1fa8c",
           "foreground": "#282a36",
           "invert_powerline": true,
           "leading_diamond": "\ue0b2",
           "style": "diamond",
           "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "trailing_diamond": "\ue0b4",
-          "type": "aws"
+          "trailing_diamond": "\ue0b4"
         }
       ],
       "type": "rprompt"
